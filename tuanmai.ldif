@@ -1,0 +1,14 @@
+dn: uid:tuanmai,ou=people,dc=localhost,dc=com
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Tuan Mai
+uid: tuanmai
+uidNumber: 3000
+gidNumber: 3000
+homeDirectory: /users/tuanmai
+loginShell: /bin/bash
+userPassword: {crypt}x
+shadowLastChange: 0
+shadowMax: 0
+shadowWarning: 0
