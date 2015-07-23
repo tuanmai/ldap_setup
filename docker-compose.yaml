@@ -1,0 +1,20 @@
+dbdata:
+  image: postgres:9.4
+  command: /bin/echo PostgreSQL Data Container
+
+db:
+  image: postgres:9.4
+  ports:
+    - "5432:5432"
+  volumes_from:
+    - dbdata
+
+web:
+  image: tuanmai/ldap_test
+  command: rails server --port 3000
+  ports:
+    - "3000:3000"
+  links:
+    - db
+  volumes:
+    - /Users/tuanmai/code/ldap_test:/myapp
