@@ -29,13 +29,16 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
+gem 'test-unit'
 
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-gem 'debugger'
+group :development do
+  # To use debugger
+  gem 'byebug'
+end
 
 gem 'devise'
 gem 'devise_ldap_authenticatable'
